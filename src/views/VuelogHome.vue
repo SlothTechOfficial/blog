@@ -1,10 +1,12 @@
 <template>
   <div class="home">
-    <img src="../assets/img/vuelog.svg">
-    <h1 v-text="system.brand"></h1>
+    <h2>Quienes somos?</h2>
     <p v-text="$t('home.description')"></p>
-    <a class="button" :href="download" v-text="$t('home.download', [system.version])" target="_blank" rel="noopener noreferrer"></a>
-    <a class="button github" :href="system.project" target="_blank" rel="noopener noreferrer" v-text="$t('home.github')"></a>
+
+    <h2>Nuestras tecnologías</h2>
+    <p>
+      Estamos convencidos de que cada problema tiene una única solución y por ello buscamos estar a la vanguardia en las tecnologías.
+    </p>
   </div>
 </template>
 
