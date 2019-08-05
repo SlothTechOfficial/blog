@@ -197,7 +197,8 @@ window.VUELOG_DATABASE = {
       },
       slug: 'multiple-languages-support',
       category: 'docs',
-      date: '2017-01-24'
+      date: '2017-01-24',
+      bgImage: 'https://scontent.fmex9-1.fna.fbcdn.net/v/t39.2365-6/29349843_519132155149305_2746596740722327552_n.jpg?_nc_cat=108&_nc_oc=AQnruz_k6QnZ-iEC-JYHxc5Q1GdbjPgW6jG2mpOkRvaAoNtDYSesSvhFNofwjwoYmfc&_nc_ht=scontent.fmex9-1.fna&oh=9d42e3bbc6acfcdce1dd7f20a40e61f1&oe=5DDA433D',
     },
     {
       title: {
@@ -210,7 +211,8 @@ window.VUELOG_DATABASE = {
       slug: 'use-social-commenting-services',
       category: 'docs',
       date: '2017-01-19',
-      draft: true
+      draft: true,
+      bgImage: 'https://picsum.photos/id/984/600/400',
     },
     {
       title: {
@@ -222,7 +224,8 @@ window.VUELOG_DATABASE = {
       },
       slug: 'insert-code-blocks-with-syntax-highlight',
       category: 'docs',
-      date: '2017-01-18'
+      date: '2017-01-18',
+      bgImage: 'https://img.freepik.com/free-vector/business-people-working-laptop-development_1262-18907.jpg?size=626&ext=jpg',
     },
     {
       title: {
@@ -234,7 +237,8 @@ window.VUELOG_DATABASE = {
       },
       slug: 'author-posts-or-pages',
       category: 'docs',
-      date: '2017-01-13'
+      date: '2017-01-13',
+      bgImage: 'https://picsum.photos/id/986/600/400',
     },
 
     {
@@ -247,7 +251,8 @@ window.VUELOG_DATABASE = {
       },
       slug: 'add-posts-or-pages',
       category: 'docs',
-      date: '2017-01-12'
+      date: '2017-01-12',
+      bgImage: 'https://picsum.photos/id/987/600/400',
     },
     {
       title: {
@@ -259,7 +264,8 @@ window.VUELOG_DATABASE = {
       },
       slug: 'customize-navigation-menu',
       category: 'docs',
-      date: '2017-01-11'
+      date: '2017-01-11',
+      bgImage: 'https://picsum.photos/id/988/600/400',
     },
     {
       title: {
@@ -271,7 +277,8 @@ window.VUELOG_DATABASE = {
       },
       slug: 'customize-the-site',
       category: 'docs',
-      date: '2017-01-10'
+      date: '2017-01-10',
+      bgImage: 'https://picsum.photos/id/989/600/400',
     },
     /* 2016 */
     {
@@ -284,7 +291,8 @@ window.VUELOG_DATABASE = {
       },
       slug: 'file-structure-of-vuelog',
       category: 'docs',
-      date: '2016-10-20'
+      date: '2016-10-20',
+      bgImage: 'https://picsum.photos/id/990/600/400',
     },
     {
       title: {
@@ -296,7 +304,16 @@ window.VUELOG_DATABASE = {
       },
       slug: 'style-examples',
       category: 'showcase',
-      date: '2016-10-19'
+      date: '2016-10-19',
+      bgImage: 'https://picsum.photos/id/991/600/400',
+      author: 'Author test',
+      description: {
+        'en-US': 'Style examples',
+        'zh-CN': 'Vuelog 文件结构',
+        'de-DE': 'Dateistruktur von Vuelog',
+        'pt-BR': 'Estrutura do Diretório do Vuelog',
+        'es-MX': 'Estilos - Ejemplos'
+      }
     }
   ]
 }
