@@ -61,6 +61,9 @@ export function posts (state, getters) {
       post.year = new Date(post.date).getFullYear()
       post.markdown = './userdata/posts/' + post.year + '/' + post.slug + '.md'
       post.categoryTitle = categoriesHash[post.category]
+      post.bgImage = post.bgImage
+      post.author = post.author || 'Slothtech Editor'
+      post.description = post.description || ''
       return post
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date))

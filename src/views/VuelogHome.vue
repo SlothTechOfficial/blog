@@ -1,53 +1,43 @@
 <template>
   <div class="home">
-    <img src="../../static/slothtech-favicon.svg">
-    <h1 v-text="system.brand"></h1>
-    <p v-text="$t('home.description')"></p>
-    <!-- <a class="button" :href="download" v-text="$t('home.download', [system.version])" target="_blank" rel="noopener noreferrer"></a> -->
-    <a class="button github" :href="system.project" target="_blank" rel="noopener noreferrer" v-text="$t('home.github')"></a>
+    <div class="cards-container">
+      <PostCard v-for="post in posts" :key="post.slug" v-bind="post" />
+    </div>
   </div>
 </template>
 
 <script>
-  import { retrieveByLanguage } from '../utils'
+import PostCard from '../components/PostCard.vue'
+export default {
+  name: 'vuelog-home',
 
-  export default {
-    name: 'vuelog-home',
-
-    computed: {
-      active () {
-        return this.$store.getters.lang
-      },
-
-      config () {
-        return this.$store.getters.config
-      },
-
-      system () {
-        return this.$store.getters.system
-      },
-
-      download () {
-        return `${this.system.project}/releases/latest`
-      },
-
-      title () {
-        return retrieveByLanguage(this.config.brand, this.active, this.config.defaultLang)
-      }
+  computed: {
+    categories () {
+      return this.$store.getters.categories
     },
-
-    created () {
-      this.$store.dispatch('documentTitle', this.title)
+    posts () {
+      return this.$store.getters.posts
     },
+    system () {
+      return this.$store.getters.system
+    },
+  },
 
-    watch: {
-      $route (to, from) {
-        if (to.query.lang !== from.query.lang) {
-          this.$store.dispatch('documentTitle', this.title)
-        }
+  created () {
+    this.$store.dispatch('documentTitle', this.title)
+  },
+
+  watch: {
+    $route (to, from) {
+      if (to.query.lang !== from.query.lang) {
+        this.$store.dispatch('documentTitle', this.title)
       }
     }
+  },
+  components: {
+    PostCard,
   }
+}
 </script>
 
 <style lang="stylus" scoped>
