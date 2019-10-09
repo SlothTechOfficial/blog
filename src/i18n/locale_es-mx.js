@@ -1,6 +1,6 @@
 const esMx = {
   home: {
-    description: 'Bienvenido a la página principal',
+    description: 'En SlothTech creemos que el conocimiento es la mejor forma de crecer como humanidad, es por ello que nos gusta compartilo a través de charlas, conferencias y cursos. De esta forma juntos podemos causar un impacto positivo a nuestro alrededor.',
     download: 'Descarga v{0}',
     github: 'GitHub'
   },

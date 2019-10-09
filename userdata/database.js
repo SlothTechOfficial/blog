@@ -53,36 +53,11 @@ window.VUELOG_DATABASE = {
   navigation: [
     {
       label: {
-        'en-US': 'Guide',
-        'zh-CN': '指南',
-        'de-DE': 'Anleitung',
-        'pt-BR': 'Guia',
-        'es-MX': 'Guía'
+        'en-US': 'How to contribute',
+        'es-MX': 'Como contribuir',
       },
       type: 'page',
-      path: '/page/guide'
-    },
-    {
-      label: {
-        'en-US': 'About',
-        'zh-CN': '关于',
-        'de-DE': 'Über',
-        'pt-BR': 'Sobre',
-        'es-MX': 'Acerca de'
-      },
-      type: 'page',
-      path: '/page/about'
-    },
-    {
-      label: {
-        'en-US': 'Showcase',
-        'zh-CN': '示例',
-        'de-DE': 'Beispiele',
-        'pt-BR': 'Exemplos',
-        'es-MX': 'Ejemplos'
-      },
-      type: 'category',
-      path: '/blog/showcase'
+      path: '/page/contribute'
     },
     {
       label: {
@@ -95,225 +70,24 @@ window.VUELOG_DATABASE = {
       type: 'archive',
       path: '/archive'
     },
-    {
-      label: {
-        'en-US': 'Links',
-        'zh-CN': '链接',
-        'de-DE': 'Links',
-        'pt-BR': 'Links',
-        'es-MX': 'Enlaces'
-      },
-      type: 'dropdown',
-      path: '', // (OPTIONAL) dropdown can be routable too if you set a valid route path
-      children: [
-        {
-          label: { 'en-US': 'Weibo', 'zh-CN': '微博', 'de-DE': 'Weibo', 'pt-BR': 'Weibo', 'es-MX': 'Weibo' },
-          type: 'outgoing',
-          link: 'https://weibo.com/myst729'
-        },
-        {
-          label: 'GitHub',
-          type: 'outgoing',
-          link: 'https://github.com/myst729'
-        },
-        {
-          label: 'StackOverflow',
-          type: 'outgoing',
-          link: 'https://stackoverflow.com/users/1032492'
-        }
-      ]
-    }
   ],
 
   pages: [
     {
+      // title: on the page
       title: {
-        'en-US': 'Vuelog Guide',
-        'zh-CN': 'Vuelog 指南',
-        'de-DE': 'Vuelog Anleitung',
-        'pt-BR': 'Guia Vuelog',
-        'es-MX': 'Guía Vuelog'
+        'en-US': 'How to Contribute',
+        'es-MX': 'Cómo contribuir',
       },
-      slug: 'guide',
       exclude: true, // (OPTIONAL) `true` to exclude the page from archive view
       titleless: false, // (OPTIONAL) `true` to hide the title in page view
-      commentless: false, // (OPTIONAL) `true` to disable comments for the page
-      draft: false // (OPTIONAL) `true` to make the page temporarily inaccessible
-    },
-    {
-      title: {
-        'en-US': 'About Vuelog',
-        'zh-CN': '关于 Vuelog',
-        'de-DE': 'Über Vuelog',
-        'pt-BR': 'Sobre o Vuelog',
-        'es-MX': 'Sobre Vuelog'
-      },
-      slug: 'about'
-    },
-    {
-      title: {
-        'en-US': 'Changelog',
-        'zh-CN': '变更日志',
-        'de-DE': 'Änderungen',
-        'pt-BR': 'Changelog',
-        'es-MX': 'Registro de cambios'
-      },
-      slug: 'changelog'
+      commentless: true, // (OPTIONAL) `true` to disable comments for the page
+      draft: false, // (OPTIONAL) `true` to make the page temporarily inaccessible
+      slug: 'contribute' // (REQUIRED) name of the MD file you want to link into this page
     }
   ],
 
-  categories: [
-    {
-      title: {
-        'en-US': 'Documentation',
-        'zh-CN': '文档',
-        'de-DE': 'Dokumentation',
-        'pt-BR': 'Documentação',
-        'es-MX': 'Documentación'
-      },
-      slug: 'docs'
-    },
-    {
-      title: {
-        'en-US': 'Showcase',
-        'zh-CN': '示例',
-        'de-DE': 'Beispiele',
-        'pt-BR': 'Exemplos',
-        'es-MX': 'Ejemplos'
-      },
-      slug: 'showcase'
-    }
-  ],
+  categories: [],
+  posts: []
 
-  posts: [
-    /* 2017 */
-    {
-      title: {
-        'en-US': 'Multiple languages support',
-        'zh-CN': '多语言支持',
-        'de-DE': 'Untersützung mehrerer Sprachen',
-        'pt-BR': 'Suporte a vários Idiomas',
-        'es-MX': 'Soporte multiidioma'
-      },
-      slug: 'multiple-languages-support',
-      category: 'docs',
-      date: '2017-01-24',
-      bgImage: 'https://scontent.fmex9-1.fna.fbcdn.net/v/t39.2365-6/29349843_519132155149305_2746596740722327552_n.jpg?_nc_cat=108&_nc_oc=AQnruz_k6QnZ-iEC-JYHxc5Q1GdbjPgW6jG2mpOkRvaAoNtDYSesSvhFNofwjwoYmfc&_nc_ht=scontent.fmex9-1.fna&oh=9d42e3bbc6acfcdce1dd7f20a40e61f1&oe=5DDA433D',
-    },
-    {
-      title: {
-        'en-US': 'Use social commenting services',
-        'zh-CN': '使用社会化评论服务',
-        'de-DE': 'Benutzung sozialer Kommentardienste',
-        'pt-BR': 'Uso de Serviços Sociais de Comentários',
-        'es-MX': 'Uso de servicios de comentarios'
-      },
-      slug: 'use-social-commenting-services',
-      category: 'docs',
-      date: '2017-01-19',
-      draft: true,
-      bgImage: 'https://picsum.photos/id/984/600/400',
-    },
-    {
-      title: {
-        'en-US': 'Insert code blocks with syntax highlight',
-        'zh-CN': '插入语法高亮的代码块',
-        'de-DE': 'Einfügen von Code Blöcken mit Syntax Highlighting',
-        'pt-BR': 'Inserir blocos de código com realce de sintaxe',
-        'es-MX': 'Bloques de código con resaltado de sintaxis'
-      },
-      slug: 'insert-code-blocks-with-syntax-highlight',
-      category: 'docs',
-      date: '2017-01-18',
-      bgImage: 'https://img.freepik.com/free-vector/business-people-working-laptop-development_1262-18907.jpg?size=626&ext=jpg',
-    },
-    {
-      title: {
-        'en-US': 'Author posts or pages',
-        'zh-CN': '编写文章或页面',
-        'de-DE': 'Beiträge und Seiten verfassen',
-        'pt-BR': 'Posts ou Páginas por Autor',
-        'es-MX': 'Publicaciones de author o páginas'
-      },
-      slug: 'author-posts-or-pages',
-      category: 'docs',
-      date: '2017-01-13',
-      bgImage: 'https://picsum.photos/id/986/600/400',
-    },
-
-    {
-      title: {
-        'en-US': 'Add posts or pages',
-        'zh-CN': '新建文章或页面',
-        'de-DE': 'Beiträge und Seiten hinzufügen',
-        'pt-BR': 'Adicionar Posts ou Páginas',
-        'es-MX': 'Agregar posts o páginas'
-      },
-      slug: 'add-posts-or-pages',
-      category: 'docs',
-      date: '2017-01-12',
-      bgImage: 'https://picsum.photos/id/987/600/400',
-    },
-    {
-      title: {
-        'en-US': 'Customize navigation menu',
-        'zh-CN': '自定义导航菜单',
-        'de-DE': 'Navigationsmenü anpassen',
-        'pt-BR': 'Customizar o menu de navegação',
-        'es-MX': 'Menú de navegación personalizado'
-      },
-      slug: 'customize-navigation-menu',
-      category: 'docs',
-      date: '2017-01-11',
-      bgImage: 'https://picsum.photos/id/988/600/400',
-    },
-    {
-      title: {
-        'en-US': 'Customize the site',
-        'zh-CN': '自定义站点',
-        'de-DE': 'Seite anpassen',
-        'pt-BR': 'Customizar o site',
-        'es-MX': 'Personalizar el sitio'
-      },
-      slug: 'customize-the-site',
-      category: 'docs',
-      date: '2017-01-10',
-      bgImage: 'https://picsum.photos/id/989/600/400',
-    },
-    /* 2016 */
-    {
-      title: {
-        'en-US': 'File structure of Vuelog',
-        'zh-CN': 'Vuelog 文件结构',
-        'de-DE': 'Dateistruktur von Vuelog',
-        'pt-BR': 'Estrutura do Diretório do Vuelog',
-        'es-MX': 'Estructura de archivos Vuelog'
-      },
-      slug: 'file-structure-of-vuelog',
-      category: 'docs',
-      date: '2016-10-20',
-      bgImage: 'https://picsum.photos/id/990/600/400',
-    },
-    {
-      title: {
-        'en-US': 'Style examples',
-        'zh-CN': '样式示例',
-        'de-DE': 'Style Beispiele',
-        'pt-BR': 'Exemplos de estilo',
-        'es-MX': 'Ejemplos de estilo'
-      },
-      slug: 'style-examples',
-      category: 'showcase',
-      date: '2016-10-19',
-      bgImage: 'https://picsum.photos/id/991/600/400',
-      author: 'Author test',
-      description: {
-        'en-US': 'Style examples',
-        'zh-CN': 'Vuelog 文件结构',
-        'de-DE': 'Dateistruktur von Vuelog',
-        'pt-BR': 'Estrutura do Diretório do Vuelog',
-        'es-MX': 'Estilos - Ejemplos'
-      }
-    }
-  ]
 }
