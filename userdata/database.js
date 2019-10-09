@@ -88,6 +88,6 @@ window.VUELOG_DATABASE = {
   ],
 
   categories: [],
-
   posts: []
+
 }
